@@ -1,0 +1,87 @@
+/* TODO: inserite il CSS necessario per completare il MHW! */
+:root{
+    --grid-size: 100%;
+    --margin-size: 20px;
+    --cell-size: calc((var(--grid-size) / 3) - 5px);
+}  
+
+.choice-grid{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.choice-grid div{
+    width: var(--cell-size);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+
+}
+img{
+    
+    width: 100%;
+    height: 200px;
+}
+.choice-grid div.checked { 
+    background-color: #006aff;
+}
+.choice-grid div.unchecked { 
+    opacity: 0.6;
+}
+
+.hidden{
+    opacity: 0.6;
+}
+
+#answer{
+    display: flex;
+    width: calc(100% - 40px);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+}
+#answer.hidden{
+    display: none;
+}
+#answer h1{
+    display: block;
+    margin: 0px 0px 0px 0px;
+}
+#answer p{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.button{
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cecece;
+    width: 100%;
+    height: 50px;
+    
+}
+.button:hover{
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+@media (max-width: 700px){
+
+    header div span {
+        display: none;
+    }
+    article{
+        width: 95%;
+    }
+}
+@media(max-width: 500px){
+    .choice-grid div{
+        width: 49%;
+    }
+}
